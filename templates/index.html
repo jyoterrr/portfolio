@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Developer Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>MyPortfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Hello, I'm a Python Developer</h1>
+
+    <h2>Welcome to My Portfolio</h2>
+
+    <p>
+        I am passionate about software development,
+        Python, Flask and DevOps technologies.
+    </p>
+
+    <a href="#projects" class="btn">
+        View My Projects
+    </a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am an aspiring developer interested in
+        building web applications and learning
+        modern development and automation tools.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-container">
+        <div>Python</div>
+        <div>Flask</div>
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>Git</div>
+        <div>GitHub</div>
+        <div>Jenkins</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <h3>Portfolio Website</h3>
+
+        <p>
+            A personal portfolio website developed
+            using Python Flask, HTML and CSS.
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h3>DevOps Automation</h3>
+
+        <p>
+            An automated build and testing pipeline
+            using GitHub and Jenkins.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>Email: your-email@example.com</p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/"
+           target="_blank">
+           My GitHub Profile
+        </a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 My Portfolio. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
