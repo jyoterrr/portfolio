@@ -7,26 +7,25 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out GitHub repository'
-                checkout scm
             }
         }
 
         stage('Check Python') {
             steps {
-                bat 'python --version'
+                bat 'py --version'
+                bat 'where py'
             }
         }
 
         stage('Create Virtual Environment') {
             steps {
-                bat 'python -m venv venv'
+                bat 'py -m venv venv'
             }
         }
 
         stage('Install Dependencies') {
             steps {
                 bat '''
-                    venv\\Scripts\\python.exe -m pip install --upgrade pip
                     venv\\Scripts\\python.exe -m pip install -r requirements.txt
                 '''
             }
@@ -41,25 +40,24 @@ pipeline {
             post {
                 always {
                     junit allowEmptyResults: true,
-                          testResults: 'test-results.xml'
+                    testResults: 'test-results.xml'
                 }
             }
         }
 
         stage('Build Complete') {
             steps {
-                echo 'Flask Portfolio Build Completed Successfully!'
+                echo 'Flask Portfolio Build Completed!'
             }
         }
     }
 
     post {
         success {
-            echo 'BUILD SUCCESSFUL'
+            echo 'BUILD SUCCESSFUL!'
         }
-
         failure {
-            echo 'BUILD FAILED - Check Console Output'
+            echo 'BUILD FAILED!'
         }
     }
 }
